@@ -1,0 +1,305 @@
+body {
+    color : #141414;
+    font-size : 20px;
+    font-family : Times, Georgia, serif;
+}
+
+.container {
+    width : 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family : arial, sans-serif;
+}
+
+section {
+    padding : 25px 0;
+}
+
+
+section:nth-child(2n + 1) {
+    background-color : #ededed;
+}
+
+nav.nav {
+    color : #fafafa;
+    font-family : sans-serif;
+    margin-bottom : 25px;
+}
+
+nav.nav .u-rel {
+    height : 100%;
+}
+
+nav.nav .button {
+    font-size : 16px;
+}
+
+.summary li {
+    list-style: none;
+    display: table;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    height : 3em;
+    width : 100%;
+}
+
+.summary li > span {
+    display : table-cell;
+    vertical-align: middle;
+}
+
+.summary li:nth-child(2n+1) {
+    border-left: 2px solid #336E7B;
+    background-color : rgba(51, 110, 123, 0.2);
+}
+
+.summary li:nth-child(2n) {
+    border-left: 2px solid #2C3E50;
+    background-color : rgba(44, 62, 80, 0.2);
+}
+
+.summary-label {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-size: 18px;
+    margin-right : 15px;
+}
+
+.section-header {
+    margin-bottom : 25px;
+}
+
+section.interstitial {
+    background-color : #2C3E50;
+}
+
+
+
+.color1 {
+    background-color : #2C3E50;
+}
+
+
+.color2 {
+    background-color: #336E7B;
+}
+
+
+.button {
+    background : Transparent;
+    border : 1px solid #fafafa;
+    color : #fafafa;
+    border-radius : 5px;
+    padding : 10px;
+    margin : 0;
+    min-width : 150px;
+    display : inline-block;
+    font-family : sans-serif;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+
+.button:hover {
+    background-color : rgba(255,255,255,0.2);
+    color : #fafafa;
+    text-decoration: none;
+    cursor : pointer;
+}
+
+.button.dark {
+    border-color : #2C3E50;
+    color : #2C3E50;
+}
+
+.button.dark:hover {
+    text-decoration: none;
+    background-color : #2C3E50;
+    color : #fafafa;
+}
+
+.card {
+    padding : 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom : 25px;
+    background-color : #fff;
+}
+
+.card-content > div {
+    margin-bottom : 0.5em;
+}
+
+.card .card-content--desc p {
+    height : 3em;
+    font-size : 14px;
+}
+
+
+.card .card-content--img {
+    width : 80%;
+    margin-left : auto;
+    margin-right : auto;
+    text-align: center;
+    height : 10em;
+}
+
+.card .card-content--img img {
+    width : auto;
+    max-height : 10em;
+    max-width : 100%;
+
+}
+.card-content .card-content--summary {
+    height : 2em;
+}
+
+.card-content .card-content--summary li {
+    font-size : 14px;
+}
+
+.card-content .card-content--btns {
+    height : 2em;
+}
+
+.card-content .card-content--btns .button {
+    font-size : 16px;
+    height: 2em;
+    padding: 0;
+    line-height: 2em;
+    margin-top : 0.75em;
+}
+
+.card-content .card-content--btns .button.dark:nth-child(2) {
+    margin-left : 15px;
+}
+
+.card .summary {
+    padding-left : 0;
+}
+.u-sm-ht {
+    height : 150px;
+}
+
+.u-md-ht {
+    height : 300px
+}
+
+.u-txt-center {
+    text-align: center;
+}
+
+.u-rel {
+    position : relative;
+}
+
+.u-total-cntr {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+.u-top-cntr {
+    position : absolute;
+    top : 50%;
+    transform : translate(0, -50%);
+}
+
+.distance-wdgt,
+.git-wdgt {
+    width : 100%;
+    height : 18.1em;
+    position : relative;
+    cursor : pointer;
+}
+
+.distance-wdgt .wdgt-line {
+    transition : width 0.25s;
+    -webkit-transition : width 0.25s;
+    -moz-transition : width 0.25s;
+    -o-transition : width 0.25s;
+    position : absolute;
+    height : 1px;
+    background-color : rgb(44, 62, 80);
+    top : 50%;
+    left : 50%;
+    display : inline-block;
+    transform-origin : 0;
+    width : 0px;
+}
+
+.distance-wdgt .links {
+    position: absolute;
+    bottom : 0;
+    right : 0;
+    text-decoration: underline;
+    font-size : 12px;
+    font-family: Arial, sans-serif;
+}
+
+.distance-wdgt .links a:first-child {
+    margin-right : 10px;
+}
+
+.distance-wdgt .wdgt-line:hover {
+    height : 3px;
+}
+
+.distance-wdgt .wdgt-axis {
+    position : absolute;
+    background-color : transparent;;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    display : inline-block;
+    border : 1px solid #336E7B;
+    border-radius : 100%;
+}
+
+.distance-wdgt .key {
+    position : absolute;
+    top : 0;
+    right : 0;
+    height : 2em;
+    width : 45%;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    text-align: right;
+}
+
+.distance-wdgt .key .date {
+    float : left;
+}
+
+.distance-wdgt .key .date:after {
+    content : " :";
+}
+
+.git-wdgt .month {
+    text-align: center;
+}
+
+.git-wdgt .removed,
+.git-wdgt .added {
+    width : 0;
+    height : 20px;
+    display: inline-block;
+}
+
+.git-wdgt .removed {
+    background-color : red;
+}
+
+
+.git-wdgt .added {
+    background-color : green;
+}
