@@ -22,7 +22,7 @@ section {
 
 
 section:nth-child(2n + 1) {
-    background-color : #ededed;
+    background-color : #fafafa;
 }
 
 nav.nav {
@@ -31,19 +31,33 @@ nav.nav {
     margin-bottom : 25px;
 }
 
-nav.nav .u-rel {
-    height : 100%;
+nav .me h3,
+nav .me h5 {
+    display: inline-block;
+    line-height: 75px;
+    margin : 0;
 }
 
-nav.nav .button {
-    font-size : 16px;
+nav a {
+    color : #fff;
+    line-height : 70px;
+    font-size : 14px;
+}
+
+nav a:nth-child(2n+1) {
+    margin-right : 20px;
+}
+
+.summary {
+    margin : 0 auto 10px;
+    padding : 0;
 }
 
 .summary li {
     list-style: none;
     display: table;
     margin-bottom: 5px;
-    padding-left: 10px;
+    padding : 0 5px 0 10px;
     font-size: 16px;
     font-family: sans-serif;
     height : 3em;
@@ -79,6 +93,7 @@ nav.nav .button {
 
 section.interstitial {
     background-color : #2C3E50;
+    box-shadow : inset 1px 2px 4px rgba(0,0,0,0.3)
 }
 
 
@@ -100,7 +115,7 @@ section.interstitial {
     border-radius : 5px;
     padding : 10px;
     margin : 0;
-    min-width : 150px;
+    min-width : 100px;
     display : inline-block;
     font-family : sans-serif;
     transition: all 0.1s;
@@ -186,11 +201,11 @@ section.interstitial {
     padding-left : 0;
 }
 .u-sm-ht {
-    height : 150px;
+    height : 70px;
 }
 
 .u-md-ht {
-    height : 300px
+    height : 150px
 }
 
 .u-txt-center {
@@ -270,7 +285,7 @@ section.interstitial {
     top : 0;
     right : 0;
     height : 2em;
-    width : 45%;
+    width : 50%;
     font-size: 14px;
     font-family: arial, sans-serif;
     text-align: right;
