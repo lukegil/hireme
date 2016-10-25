@@ -17,6 +17,15 @@ h5 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+a:hover {
+    color : #98DDC6;
+}
+
+*::selection {
+    color : #C1444C;
+    background : #98DDC6;
+}
+
 .color1 {
     background-color : #2C3E50;
 }
@@ -165,13 +174,14 @@ section.interstitial {
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     -o-transition: all 0.1s;
+    cursor : url("thumb-up.png"), pointer;
 }
 
 .button:hover {
     background-color : rgba(255,255,255,0.2);
     color : #fafafa;
     text-decoration: none;
-    cursor : pointer;
+
 }
 
 .button.dark {
