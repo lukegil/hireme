@@ -1,7 +1,11 @@
 body {
     color : #141414;
     font-size : 20px;
-    font-family : Times, Georgia, serif;
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
+p {
+    font-weight : 800;
 }
 
 .container {
@@ -13,7 +17,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family : arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 section {
@@ -27,7 +31,6 @@ section:nth-child(2n + 1) {
 
 nav.nav {
     color : #fafafa;
-    font-family : sans-serif;
     margin-bottom : 25px;
 }
 
@@ -44,7 +47,7 @@ nav a {
     font-size : 14px;
 }
 
-nav a:nth-child(2n+1) {
+nav a {
     margin-right : 20px;
 }
 
@@ -117,7 +120,6 @@ section.interstitial {
     margin : 0;
     min-width : 100px;
     display : inline-block;
-    font-family : sans-serif;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -155,7 +157,7 @@ section.interstitial {
 
 .card .card-content--desc p {
     height : 3em;
-    font-size : 14px;
+    font-size : 16px;
 }
 
 
