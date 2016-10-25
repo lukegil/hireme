@@ -1,15 +1,12 @@
 body {
-    color : #141414;
-    font-size : 20px;
+    padding-top : 70px;
     font-family: 'Cormorant Garamond', sans-serif;
+    font-size : 20px;
+    color : #141414;
 }
 
 p {
     font-weight : 800;
-}
-
-.container {
-    width : 100%;
 }
 
 h1,
@@ -20,35 +17,80 @@ h5 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-section {
-    padding : 25px 0;
+.color1 {
+    background-color : #2C3E50;
 }
 
+.color2 {
+    background-color: #336E7B;
+}
 
-section:nth-child(2n + 1) {
-    background-color : #fafafa;
+.u-sm-ht {
+    height : 70px;
+}
+
+.u-md-ht {
+    height : 150px
+}
+
+.u-txt-center {
+    text-align: center;
+}
+
+.u-rel {
+    position : relative;
+}
+
+.u-total-cntr {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    -webkit-transform : translate(-50%, -50%);
+    -moz-transform : translate(-50%, -50%);
+    -ms-transform : translate(-50%, -50%);
+    -o-transform : translate(-50%, -50%);
+}
+
+.u-top-cntr {
+    position : absolute;
+    top : 50%;
+    transform : translate(0, -50%);
+    -webkit-transform : translate(0%, -50%);
+    -moz-transform : translate(0%, -50%);
+    -ms-transform : translate(0%, -50%);
+    -o-transform : translate(0%, -50%);
+}
+
+.container {
+    width : 100%;
 }
 
 nav.nav {
-    color : #fafafa;
+    position : fixed;
+    z-index : -1;
+    top : 0;
+    left : 0;
+    right : 0;
+    width : 110%;
+    height : 70px;
+    padding : 0 2.5%;
     margin-bottom : 25px;
+    color : #fafafa;
 }
 
 nav .me h3,
 nav .me h5 {
     display: inline-block;
-    line-height: 75px;
     margin : 0;
+    line-height: 75px;
 }
 
 nav a {
-    color : #fff;
+    margin-right : 5%;
     line-height : 70px;
     font-size : 14px;
-}
-
-nav a {
-    margin-right : 20px;
+    color : #fff;
 }
 
 .summary {
@@ -56,15 +98,23 @@ nav a {
     padding : 0;
 }
 
+.summary-label {
+    margin-right : 15px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-size: 18px;
+}
+
 .summary li {
-    list-style: none;
     display: table;
-    margin-bottom: 5px;
-    padding : 0 5px 0 10px;
-    font-size: 16px;
-    font-family: sans-serif;
     height : 3em;
     width : 100%;
+    margin-bottom: 5px;
+    padding : 0 5px 0 10px;
+    list-style: none;
+    font-size: 16px;
+    font-family: sans-serif;
 }
 
 .summary li > span {
@@ -82,12 +132,15 @@ nav a {
     background-color : rgba(44, 62, 80, 0.2);
 }
 
-.summary-label {
-    font-variant: small-caps;
-    text-transform: lowercase;
-    font-weight: 800;
-    font-size: 18px;
-    margin-right : 15px;
+
+section {
+    padding : 25px 0;
+    background-color: #fff;
+}
+
+
+section:nth-child(2n + 1) {
+    background-color : #fafafa;
 }
 
 .section-header {
@@ -99,27 +152,15 @@ section.interstitial {
     box-shadow : inset 1px 2px 4px rgba(0,0,0,0.3)
 }
 
-
-
-.color1 {
-    background-color : #2C3E50;
-}
-
-
-.color2 {
-    background-color: #336E7B;
-}
-
-
 .button {
-    background : Transparent;
-    border : 1px solid #fafafa;
-    color : #fafafa;
-    border-radius : 5px;
-    padding : 10px;
-    margin : 0;
-    min-width : 100px;
     display : inline-block;
+    min-width : 100px;
+    padding : 10px;
+    border : 1px solid #fafafa;
+    border-radius : 5px;
+    margin : 0;
+    background : Transparent;
+    color : #fafafa;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -146,8 +187,8 @@ section.interstitial {
 
 .card {
     padding : 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin-bottom : 25px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color : #fff;
 }
 
@@ -163,10 +204,10 @@ section.interstitial {
 
 .card .card-content--img {
     width : 80%;
+    height : 10em;
     margin-left : auto;
     margin-right : auto;
     text-align: center;
-    height : 10em;
 }
 
 .card .card-content--img img {
@@ -188,11 +229,11 @@ section.interstitial {
 }
 
 .card-content .card-content--btns .button {
-    font-size : 16px;
     height: 2em;
     padding: 0;
-    line-height: 2em;
+    font-size : 16px;
     margin-top : 0.75em;
+    line-height: 2em;
 }
 
 .card-content .card-content--btns .button.dark:nth-child(2) {
@@ -202,37 +243,9 @@ section.interstitial {
 .card .summary {
     padding-left : 0;
 }
-.u-sm-ht {
-    height : 70px;
-}
 
-.u-md-ht {
-    height : 150px
-}
 
-.u-txt-center {
-    text-align: center;
-}
-
-.u-rel {
-    position : relative;
-}
-
-.u-total-cntr {
-    position : absolute;
-    top : 50%;
-    left : 50%;
-    transform : translate(-50%, -50%);
-}
-
-.u-top-cntr {
-    position : absolute;
-    top : 50%;
-    transform : translate(0, -50%);
-}
-
-.distance-wdgt,
-.git-wdgt {
+.distance-wdgt {
     width : 100%;
     height : 18.1em;
     position : relative;
@@ -240,18 +253,22 @@ section.interstitial {
 }
 
 .distance-wdgt .wdgt-line {
+    display : inline-block;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    width : 0px;
+    height : 1px;
+    background-color : rgb(44, 62, 80);
+    transform-origin : 0;
+    -webkit-transform-origin : 0;
+    -moz-transform-origin : 0;
+    -o-transform-origin : 0;
+    -ms-transform-origin : 0;
     transition : width 0.25s;
     -webkit-transition : width 0.25s;
     -moz-transition : width 0.25s;
     -o-transition : width 0.25s;
-    position : absolute;
-    height : 1px;
-    background-color : rgb(44, 62, 80);
-    top : 50%;
-    left : 50%;
-    display : inline-block;
-    transform-origin : 0;
-    width : 0px;
 }
 
 .distance-wdgt .links {
@@ -272,14 +289,18 @@ section.interstitial {
 }
 
 .distance-wdgt .wdgt-axis {
+    display : inline-block;
     position : absolute;
-    background-color : transparent;;
     top : 50%;
     left : 50%;
-    transform : translate(-50%, -50%);
-    display : inline-block;
     border : 1px solid #336E7B;
     border-radius : 100%;
+    background-color : transparent;
+    transform : translate(-50%, -50%);
+    -webkit-transform : translate(-50%, -50%);
+    -moz-transform : translate(-50%, -50%);
+    -ms-transform : translate(-50%, -50%);
+    -o-transform : translate(-50%, -50%);
 }
 
 .distance-wdgt .key {
@@ -301,22 +322,13 @@ section.interstitial {
     content : " :";
 }
 
-.git-wdgt .month {
-    text-align: center;
-}
 
-.git-wdgt .removed,
-.git-wdgt .added {
-    width : 0;
-    height : 20px;
-    display: inline-block;
-}
+@media (max-width : 320px) {
+    nav .me h3 {
+        font-size : 90%;
+    }
 
-.git-wdgt .removed {
-    background-color : red;
-}
-
-
-.git-wdgt .added {
-    background-color : green;
+    .no-iphone {
+        display : none;
+    }
 }
