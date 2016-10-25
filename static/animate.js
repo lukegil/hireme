@@ -21,13 +21,8 @@ widgets.prototype.distance_widget = {
     load_listener : function() {
         var parent_scope = this;
         if (document.readyState !== "loading") {
-            console.log("calling retrieve data");
-            console.log(document.readyState);
             parent_scope.retrieve_data();
-            /* killing for now, makes things messier */
-            //parent_scope.add_axes();
             document.removeEventListener("readystatechange", parent_scope.bound_load);
-            console.log("listener removed");
         }
     },
 
@@ -121,7 +116,5 @@ widgets.prototype.distance_widget = {
 }
 
 
-
 var w = new widgets();
-console.log(w);
 w.distance_widget.add_listeners();
