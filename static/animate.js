@@ -116,5 +116,48 @@ widgets.prototype.distance_widget = {
 }
 
 
+function page() {
+    //constructor
+}
+
+page.prototype.parallax = {
+    add_listeners : function() {
+        var els = document.querySelectorAll(".interstitial");
+        var parent_scope = this;
+        this.parallaxes = [];
+        for (var i = 0; i < els.length; i++) {
+            var el = els[i];
+            this.parallaxes[i] = {
+                prev : el.previousElementSibling,
+                next : el.nextElementSibling,
+                upper : function(el) { return el.previousElementSibling.getBoundingClientRect().bottom },
+                lower : function(el) { return (el.nextElementSibling) ? el.nextElementSibling.getBoundingClientRect().top : document.body.scrollHeight},
+                el_height : el.getBoundingClientRect().height,
+            }
+
+            var hits_top_bound = this.hits_top.bind(parent_scope, els[i], i)
+            window.addEventListener("scroll", hits_top_bound);
+        }
+    },
+
+    hits_top : function(el, i) {
+        var obj = this.parallaxes[i];
+
+        if (obj.upper(el) <= 0 && obj.lower(el) <= obj.el_height) {
+            if (!el.classList.contains("para")) {
+                el.classList.add("para");
+                obj.next.style.marginTop = "150px";
+            }
+        }
+        else if (el.classList.contains("para")) {
+            el.classList.remove("para");
+            obj.next.style.marginTop = "0";
+        }
+    }
+}
+
 var w = new widgets();
 w.distance_widget.add_listeners();
+
+var p = new page();
+p.parallax.add_listeners();

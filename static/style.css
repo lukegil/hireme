@@ -162,6 +162,14 @@ section.interstitial {
     box-shadow : inset 1px 2px 4px rgba(0,0,0,0.3);
 }
 
+section.interstitial.para {
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    z-index : -1;
+}
+
 .button {
     display : inline-block;
     min-width : 100px;
