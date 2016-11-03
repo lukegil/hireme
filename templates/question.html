@@ -1,0 +1,28 @@
+
+<p>{{ context.q_text }}</p>
+<form action="/hireme/q-and-a/" method="post">
+    <input type="hidden" name="q_num" value="{{ context.q_num }}" />
+
+    <div class="choices row">
+    {% for answer in context.answer_options %}
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <label>
+                <input name="answer" value="{{ answer.key }}" type="radio">
+                {{ answer.text }}
+            </label>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="addl-comments">
+        <label class="optional">Additional comments</label>
+        <textarea name="addl_text" value="" placeholder="additional comments about my experience, the site, or anything else?"></textarea>
+    </div>
+    <div class="company">
+        <label class="optional">Where do you work?</label>
+        <input style="width : 100%;" name="company" value="" type="text">
+
+    </div>
+    <div class="submission">
+        <span class="answer submit button dark small u-txt-center">Submit</span>
+    </div>
+</form>

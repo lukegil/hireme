@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div class="text-wrapper header">
+        <h2 style="display : inline">Luke Gilson</h2>&nbsp;&nbsp;<h5 style="display : inline;font-weight : 300;">Product Management | Web Development</h5>
+      </div>
+      <a href="/hireme">
+	<div class="row left" style="background-color : rgba(255,0,0,0.6);">
+	  <div class="text-wrapper">
+            <h2>About</h2>
+	  </div>
+	</div>
+      </a>
+      <a href="/blog">
+	<div class="row right" style="background-color : blue;">
+	  <div class="text-wrapper">
+            <h2>Blog</h2>
+	  </div>
+	</div>
+      </a>
+      <a href="https://github.com/lukegil/">
+	<div class="row left" style="background-color : green;">
+	  <div class="text-wrapper">
+            <h2>Projects</h2>
+	  </div>
+	</div>
+      </a>
+  </div>
+  <script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+
+</body>

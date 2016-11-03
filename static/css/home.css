@@ -1,0 +1,82 @@
+body {
+  font-family : "Work Sans", sans-serif;
+  font-weight : 200;
+  margin : 0;
+  padding : 0;
+  background-color : #22313F;
+  color : #fff;
+  overflow : hidden;
+}
+
+a:-webkit-any-link {
+    color : inherit;
+    text-decoration : none;
+}
+
+.container {
+  margin : 0;
+  padding : 0;
+  width : 100%;
+}
+
+.row {
+  position : relative;
+  height : 25vh;
+  padding : 0.1em;
+  cursor : hover;
+}
+
+.header {
+  padding : 15px 0;
+}
+.text-wrapper {
+  width : 80%;
+  margin : auto;
+}
+
+.row.right:before, .row.left:before {
+  content : "";
+  font-family : "fontAwesome";
+  position : absolute;
+  height : 100%;
+  top : 0;
+  background-color : green;
+  transition : all ease 0.5s;
+  color : rgba(255,255,255,0.6);
+  font-size : 5em;
+  text-align : center;
+  line-height : 25vh;
+  z-index : 1;
+  width : 2em;
+}
+
+.row.right:before {
+  left : -100%;
+  content : "\f0a9";
+}
+
+.row.left:before {
+  left : 120%;
+  content : "\f0a8";
+}
+
+
+
+.row.right:hover:before{
+  left : 0;
+}
+.row.left:hover:before{
+  left : calc(100% - 2em);
+}
+
+
+.row > * {
+  font-size : 175%;
+}
+h2 {
+  font-weight : 200;
+}
+
+.right {
+  text-align : right;
+}
