@@ -373,6 +373,16 @@ section.interstitial.para {
     min-width: 125px;
 }
 
+#q-and-a .button.inactive {
+    opacity : 0.7;
+    cursor : initial;
+}
+
+#q-and-a .button.inactive:hover {
+    background: Transparent;
+    color: #2C3E50;
+}
+
 #q-and-a .title {
     font-variant: small-caps;
     text-transform: lowercase;

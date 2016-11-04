@@ -150,7 +150,7 @@ QAndA.prototype.displaying = function(p) {
     };
 
     function tear_down() {
-        p.qa_node.style.bottom = "-500px";
+        p.qa_node.style.bottom = "-1000px";
     };
 
     function scroll_listener() {
@@ -225,7 +225,7 @@ QAndA.prototype.answering = function(p) {
 
     function get_question__success() {
         p.qa_content.innerHTML = p.req.responseText;
-        listen__submit_answer();
+        listen__activate_button();
     }
 
     function get_question__fail() {
@@ -238,11 +238,24 @@ QAndA.prototype.answering = function(p) {
             var q = e.target.getAttribute("last-q") || 1;
             get_question(q);
         });
-    }
+    };
 
     function listen__submit_answer() {
         var el = p.qa_content.querySelector(".answer");
         el.addEventListener("click", submit_answer);
+    };
+
+    function listen__activate_button() {
+        var inputs = p.qa_content.querySelectorAll(".choices input");
+        console.log(inputs);
+        for (var i = 0; i < inputs.length; i++)
+            inputs[i].addEventListener("click", function() {
+                var el = p.qa_content.querySelector(".submission .button");
+                el.classList.remove("inactive");
+                el.classList.add("answer");
+                listen__submit_answer();
+            });
+
     };
 
     listen__get_question();
