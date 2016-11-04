@@ -354,7 +354,7 @@ section.interstitial.para {
 
 #q-and-a {
     position: fixed;
-    bottom: -500px;
+    bottom: -1000px;
     left: 50%;
     transform: translate(-50%, 0);
     background: #fff;
