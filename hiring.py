@@ -1,3 +1,4 @@
+import os
 from flask import Flask, url_for, render_template, g, request, current_app
 import controller, view
 
@@ -5,7 +6,7 @@ app = Flask(__name__)
 
 with app.app_context():
     current_app.local_paths = {
-        "db_config" : "config/my.conf",
+        "db_config" : os.path.dirname(os.path.realpath(__file__)) + "/config/my.conf",
     }
 
 
